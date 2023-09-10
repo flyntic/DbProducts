@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Products page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Availability</h1>
+    <table>
+        <th> Article</th>
+        <th> Name</th>
+        <th> Brand</th>
+        <th> Type</th>
+        <th> Price</th>
+        <th> Weight</th>
+        <th> Count</th>
+        @foreach(var item in Model.Products)
+        {<tr>
+            <td> @item.Article</td>
+            <td> @item.Name</td>
+            <td> @item.Brand</td>
+            <td> @item.Type</td>
+            <td> @item.Price</td>
+            <td> @item.Weight</td>
+            <td> @item.Count</td>
+
+             <a asp-page="Index" asp-page-handler="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+             <form method="post">
+                  <input type="submit" value="Edit" asp-page="Index" asp-page-handler="Edit" asp-route-id="@item.Id" />
+             </form>
+        </tr>
+        }
+
+    </table>
+</div>
