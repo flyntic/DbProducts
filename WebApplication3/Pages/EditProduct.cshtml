@@ -1,0 +1,42 @@
+﻿@page
+@model WebApplication3.Pages.EditProductModel
+@{
+    ViewData["Title"] = "Edit Product page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Availability</h1>
+    <table>
+            <tr> 
+               <td>Article</td>
+               <td> @Model.Product.Article</td>
+            </tr>
+
+            <tr> 
+                <td>Name</td>
+            <td><input value=@Model.Product.Name /></td>
+            </tr>
+            <tr> 
+             <td>Brand</td>
+            <td> <input value=@Model.Product.Brand /></td>
+            </tr>
+            <tr> 
+               <td>Type</td>
+            <td> <input value=@Model.Product.Type /></td>
+             </tr>
+             <tr>
+                <td>Price</td>
+            <td> <input value=@Model.Product.Price /></td>
+            </tr>
+            <tr>
+               <td>Weight</td>
+            <td> <input value=@Model.Product.Weight /></td>
+            </tr>
+            <tr>
+               <td> Count</td>
+            <td> <input value=@Model.Product.Count /></td>
+             </tr>
+
+    </table>
+</div>
+

@@ -1,15 +1,18 @@
-﻿namespace WebApplication3.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WebApplication3.Model
 {
     public class Product
     {
-        public int Id;
-        public string Article;
-        public string Name;
-        public string Brand;
-        public string Type;
-        public decimal Price;
-        public decimal Weight;
-        public int Count;
+        [Key]
+        public int Id { get; set; }
+        public string Article { get; set; }  
+        public string? Name { get; set; }
+        public string? Brand { get; set; }
+        public string? Type { get; set; }
+        public decimal? Price { get; set; }
+        public decimal? Weight { get; set; }
+        public int? Count { get; set; }
 
     }
 }
